@@ -1,6 +1,13 @@
-// Playground - noun: a place where people can play
+//
+//  TipCalculaorModel.swift
+//  TipCalculator
+//
+//  Created by iStudents on 2/6/15.
+//  Copyright (c) 2015 iStudents. All rights reserved.
+//
 
-import UIKit
+import Foundation
+//import UIKit
 
 class TipCalculatorModel {
     
@@ -41,6 +48,3 @@ class TipCalculatorModel {
         
     }
 }
-
-//let tipCalc = TipCalculator(total: 33.25, taxPct: 0.06)
-//tipCalc.returnPossibleTips()

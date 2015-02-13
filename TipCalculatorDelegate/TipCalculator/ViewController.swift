@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate{
+    var sortedKeys: [int] = []
+    var possibleTips = Dictionary < int, (tipAmt:Double, total:Double)>()
+    let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +26,10 @@ class ViewController: UIViewController {
 
    
 
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var totalTextField: UITextField!
     
-   
-
     @IBOutlet weak var taxPctLabel: UILabel!
     
     @IBOutlet weak var taxPctSlider: UISlider!
@@ -34,8 +37,8 @@ class ViewController: UIViewController {
     @IBAction func calculateTapped(sender: AnyObject) {
         
     }
+    
 
-   
     
     @IBAction func taxPercentageChanged(sender: AnyObject) {
         tipCalc.taxPct = Double(taxPctSlider.value) / 100.0
@@ -71,7 +74,31 @@ class ViewController: UIViewController {
         //3
         taxPctLabel.text = "Tax Percentage (\(Int(taxPctSlider.value))%)"
         //4
-        resultsTextView.text = ""
+        resultsTextView.text = " "
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sortedKeys.count
+    }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+            
+        }
+       
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell(style: UITableViewCellStyle.Value2, reuseIdentifier: nil)
+        
+        let tipPct = sortedKeys[indexPath.row]
+        let tipAmt = possibleTips[tipPct]!.tipAmt
+        let total = possibleTips[tipPct]!.total
+        
+        cell.textLabel!.text = "\(tipPct)%:"
+        cell.detailTextLabel!.text = String(format: "Tip: $%0.2f, Total: $%0.2f", tipAmt, total)
+        return cell
     }
 }
 

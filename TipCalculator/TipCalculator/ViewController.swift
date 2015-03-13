@@ -56,7 +56,7 @@ class ViewController: UIViewController {
             results += "\(tipPct)%: \(tipValue)\n"
         }
         //5
-        resultsTextView.text = results
+       // resultsTextView.text = results
         
     }
     
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         //3
         taxPctLabel.text = "Tax Percentage (\(Int(taxPctSlider.value))%)"
         //4
-        resultsTextView.text = ""
+       // resultsTextView.text = ""
     }
 }
 

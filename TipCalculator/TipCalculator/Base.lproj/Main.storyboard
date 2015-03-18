@@ -70,7 +70,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="RRt-Ya-xeR" id="DSn-LJ-bCQ"/>
+                        <outlet property="resultsTextView" destination="RRt-Ya-xeR" id="Lzq-0d-C2N"/>
                         <outlet property="taxPctLabel" destination="5q8-cW-B4g" id="7QN-eB-z67"/>
                         <outlet property="taxPctSlider" destination="e6n-A9-gea" id="Z7L-uY-soG"/>
                         <outlet property="totalTextField" destination="fVi-N6-6mr" id="ttz-7h-zVy"/>

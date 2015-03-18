@@ -27,11 +27,24 @@ class ViewController: UIViewController {
     
    
 
+    @IBOutlet weak var resultsTextView: UITextView!
     @IBOutlet weak var taxPctLabel: UILabel!
     
     @IBOutlet weak var taxPctSlider: UISlider!
     
     @IBAction func calculateTapped(sender: AnyObject) {
+        //1
+        tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
+        //2
+        let possibleTips = tipCalc.returnPossibleTips()
+        var results = ""
+        //3
+        for(tipPct, tipValue) in possibleTips{
+            //4
+            results += "\(tipPct)%: \(tipValue)\n"
+        }
+        //5
+        resultsTextView.text = results
         
     }
 
@@ -45,23 +58,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func viewTapped(sender: AnyObject) {
-        //1
-        tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
-        //2
-        let possibleTips = tipCalc.returnPossibleTips()
-        var results = ""
-        //3
-        for(tipPct, tipValue) in possibleTips{
-            //4
-            results += "\(tipPct)%: \(tipValue)\n"
-        }
-        //5
-       // resultsTextView.text = results
+        totalTextField.resignFirstResponder()
         
     }
     
     
     let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
+    
+    var possibleTips = Dictionary<Int, (tipAmt:Double, total:Double)>()
+    var sortedKeys:[Int] = []
+
     
     func refreshUI(){
         //1
@@ -71,7 +77,7 @@ class ViewController: UIViewController {
         //3
         taxPctLabel.text = "Tax Percentage (\(Int(taxPctSlider.value))%)"
         //4
-       // resultsTextView.text = ""
+      // resultsTextView.text = ""
     }
 }
 

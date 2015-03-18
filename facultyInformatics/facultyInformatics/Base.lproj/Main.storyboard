@@ -339,7 +339,7 @@ Doctor of Philosophy Program in Computer Science</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-qJ-n9q">
                                 <rect key="frame" x="16" y="188" width="288" height="139"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">     คณะวิทยาการสารสนเทศ   มหาวิทยาลัยมหาสารคาม  เป็นหน่วยงานในสถาบันอุดมศึกษาของรัฐ  ที่ได้ดำเนินงานตามพันธกิจ และภาระหน้าที่ของสถาบันอุดมศึกษา  ตั้งแต่ช่วงเริ่มแรกก่อตั้งขึ้น โดยใช้ชื่อว่า“โครงการจัดตั้งคณะวิทยาการสารสนเทศ” ต่อมาเมื่อวันที่ 24 เมษายน 2546  ได้มีมติจากกรรมการสภามหาวิทยาลัย ในการประชุมครั้งที่ 4/2546  อนุมัติให้โครงการจัดตั้งคณะวิทยาการสารสนเทศ เปลี่ยนสถานะเป็น  “คณะวิทยาการสารสนเทศ”  เป็นคณะนอกระบบราชการ สังกัดมหาวิทยาลัยมหาสารคาม</mutableString>
+                                <string key="text">     คณะวิทยาการสารสนเทศ   มหาวิทยาลัยมหาสารคาม  เป็นหน่วยงานในสถาบันอุดมศึกษาของรัฐ  ที่ได้ดำเนินงานตามพันธกิจ และภาระหน้าที่ของสถาบันอุดมศึกษา  ตั้งแต่ช่วงเริ่มแรกก่อตั้งขึ้น โดยใช้ชื่อว่า“โครงการจัดตั้งคณะวิทยาการสารสนเทศ” ต่อมาเมื่อวันที่ 24 เมษายน 2546  ได้มีมติจากกรรมการสภามหาวิทยาลัย ในการประชุมครั้งที่ 4/2546  อนุมัติให้โครงการจัดตั้งคณะวิทยาการสารสนเทศ เปลี่ยนสถานะเป็น  “คณะวิทยาการสารสนเทศ”  เป็นคณะนอกระบบราชการ สังกัดมหาวิทยาลัยมหาสารคาม</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

@@ -64,12 +64,12 @@ class ViewController: UIViewController {
         
         let numberOfFish = Int(self.numberOfFishSlider.value)
         
-        for loopNumber in 1...numberOfFish {
+        for loopNumber in 0...numberOfFish {
             
-            let duration = 1.0
+            let duration = 2.0
             let options = UIViewAnimationOptions.CurveLinear
             let delay = NSTimeInterval(100 + arc4random_uniform(100)) / 1000
-            let size : CGFloat = CGFloat( arc4random_uniform(40))+20
+            let size : CGFloat = CGFloat( arc4random_uniform(100))+20
             let yPosition : CGFloat = CGFloat( arc4random_uniform(200))+20
             let fish = UIImageView()
             
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
 
             UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
                 
-                fish.frame = CGRectMake(320, yPosition, size, size)
+                fish.frame = CGRectMake(120, yPosition, size, size)
                 
                 }, completion: { animationFinished in
         
